@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import { questions } from "./utils/questions";
 import QuestionCard from "./components/QuestionCard";
 import { useRouter } from "next/navigation";
@@ -19,6 +20,8 @@ export default function Home() {
       router.push(`/results?score=${score + 1}`);
     }
   };
+
+  useEffect(() => {}, []);
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
